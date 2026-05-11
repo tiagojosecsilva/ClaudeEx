@@ -35,3 +35,26 @@ git push
 ```
 
 Remote: `https://github.com/tiagojosecsilva/ClaudeEx` (branch: `master`)
+
+## New project setup (applies to all projects)
+
+Every new project must be set up with git and pushed to GitHub from the start. Steps:
+
+```powershell
+# 1. Initialize git and configure identity
+git init
+git config user.name "tiagojosecsilva"
+git config user.email "tiagojosecsilva@gmail.com"
+
+# 2. Create .gitignore (exclude .claude/settings.local.json at minimum)
+
+# 3. Create the GitHub repo and link it
+gh repo create <repo-name> --public --description "<description>" --source . --remote origin
+
+# 4. Stage, commit, and push
+git add .
+git commit -m "Initial commit: <brief description>"
+git push -u origin master
+```
+
+GitHub account: `tiagojosecsilva`
