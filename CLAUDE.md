@@ -4,16 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Running the project
 
-Open `tictactoe.html` directly in a browser — no build step or server needed.
+Open `index.html` directly in a browser — no build step or server needed.
 
 On Windows:
 ```powershell
-Start-Process "C:\Users\TiagoSilva\ClaudeEx\tictactoe.html"
+Start-Process "C:\Users\TiagoSilva\ClaudeEx\index.html"
 ```
 
 ## Architecture
 
-Everything lives in a single file: `tictactoe.html`. HTML, CSS, and JS are co-located with no external dependencies.
+Everything lives in a single file: `index.html`. HTML, CSS, and JS are co-located with no external dependencies.
 
 **Game logic (inline `<script>`):**
 - `board` — flat 9-element array (`null | 'X' | 'O'`), indexed 0–8 left-to-right, top-to-bottom.
