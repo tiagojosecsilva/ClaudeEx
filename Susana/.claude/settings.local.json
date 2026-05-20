@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm install *)",
-      "Bash(vercel --yes)"
+      "Bash(vercel --yes)",
+      "Bash(vercel --prod --yes)"
     ]
   }
 }
