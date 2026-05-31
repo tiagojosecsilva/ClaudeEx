@@ -103,12 +103,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: background 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
 }
 nav.scrolled {
   background: rgba(245, 239, 224, 0.96);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--border);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 .nav-logo {
   font-family: var(--serif);
