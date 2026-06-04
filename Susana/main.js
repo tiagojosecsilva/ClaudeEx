@@ -15,15 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.getElementById('burgerBtn');
   const mobileNav = document.getElementById('mobileNav');
 
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+  }
+
   burgerBtn.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
   });
 
-  window.closeMobileNav = function () {
-    mobileNav.classList.remove('open');
-  };
+  // Fechar ao clicar em qualquer link do menu mobile (remove inline onclick do HTML)
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
 
-  // Fechar menu ao carregar noutra secção com teclado (Escape)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMobileNav();
   });
@@ -89,8 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('formSuccess');
 
   if (contactForm) {
+    let lastSubmitTime = 0;
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // Honeypot: bots preenchem campos ocultos — rejeitar silenciosamente
+      const honeypot = contactForm.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
+      // Rate limiting: mínimo 30 segundos entre tentativas
+      const now = Date.now();
+      const elapsed = now - lastSubmitTime;
+      if (lastSubmitTime && elapsed < 30000) {
+        const remaining = Math.ceil((30000 - elapsed) / 1000);
+        showGeneralError(`Aguarde ${remaining}s antes de tentar novamente.`);
+        return;
+      }
 
       const nome     = contactForm.querySelector('#nome');
       const email    = contactForm.querySelector('#email');
@@ -100,13 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
       clearErrors();
 
       let valid = true;
-      if (!nome.value.trim())                      { showError(nome,     'Preencha o seu nome.');           valid = false; }
-      if (!email.value.trim())                     { showError(email,    'Preencha o seu email.');          valid = false; }
-      if (!servico.value)                          { showError(servico,  'Selecione um serviço.');          valid = false; }
-      if (mensagem.value.trim().length < 20)       { showError(mensagem, 'A mensagem deve ter pelo menos 20 caracteres.'); valid = false; }
+      if (!nome.value.trim())                { showError(nome,     'Preencha o seu nome.');                          valid = false; }
+      if (!isValidEmail(email.value.trim())) { showError(email,    'Introduza um email válido.');                    valid = false; }
+      if (!servico.value)                    { showError(servico,  'Selecione um serviço.');                         valid = false; }
+      if (mensagem.value.trim().length < 20) { showError(mensagem, 'A mensagem deve ter pelo menos 20 caracteres.'); valid = false; }
 
       if (!valid) return;
 
+      lastSubmitTime = Date.now();
       const btn = contactForm.querySelector('.form-submit');
       btn.textContent = 'A enviar…';
       btn.disabled = true;
@@ -122,12 +142,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           btn.textContent = 'Erro ao enviar. Tente novamente.';
           btn.disabled = false;
+          showFallback();
         }
       }).catch(() => {
         btn.textContent = 'Erro ao enviar. Tente novamente.';
         btn.disabled = false;
+        showFallback();
       });
     });
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
 
     function showError(field, msg) {
       field.classList.add('input-error');
@@ -137,9 +163,33 @@ document.addEventListener('DOMContentLoaded', () => {
       field.insertAdjacentElement('afterend', err);
     }
 
+    function showGeneralError(msg) {
+      const existing = contactForm.querySelector('.form-general-error');
+      if (existing) existing.remove();
+      const err = document.createElement('p');
+      err.className = 'form-general-error';
+      err.textContent = msg;
+      const btn = contactForm.querySelector('.form-submit');
+      btn.insertAdjacentElement('beforebegin', err);
+    }
+
+    // Fallback por email direto quando o Formspree falha
+    function showFallback() {
+      if (contactForm.querySelector('.form-fallback')) return;
+      const fallback = document.createElement('p');
+      fallback.className = 'form-fallback';
+      const text = document.createTextNode('Em alternativa, contacte diretamente: ');
+      const link = document.createElement('a');
+      link.href = 'mailto:susana.xarepe@gmail.com';
+      link.textContent = 'susana.xarepe@gmail.com';
+      fallback.appendChild(text);
+      fallback.appendChild(link);
+      contactForm.querySelector('.form-note').insertAdjacentElement('afterend', fallback);
+    }
+
     function clearErrors() {
       contactForm.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-      contactForm.querySelectorAll('.field-error').forEach(el => el.remove());
+      contactForm.querySelectorAll('.field-error, .form-general-error').forEach(el => el.remove());
     }
   }
 

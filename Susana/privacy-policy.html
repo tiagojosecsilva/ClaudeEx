@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  <title>Política de Privacidade — Susana Xarepe, Solicitadora</title>
+  <meta name="description" content="Política de Privacidade, Aviso Legal e informação sobre o tratamento de dados pessoais de Susana Xarepe, Solicitadora." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:      #f5efe0;
+      --parchment:  #ede4cf;
+      --dark:       #14221b;
+      --gold:       #c09a4a;
+      --gold-light: #d4b572;
+      --muted:      #7a7063;
+      --white:      #fdfaf3;
+      --border:     #ddd5c0;
+      --serif:      'Cormorant Garamond', Georgia, serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ─── Header ─── */
+    .pp-header {
+      background: var(--dark);
+      color: var(--cream);
+      padding: 2.5rem 2rem;
+    }
+    .pp-header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .pp-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      transition: opacity 0.2s;
+    }
+    .pp-back:hover { opacity: 0.75; }
+    .pp-back svg { flex-shrink: 0; }
+    .pp-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .pp-title em { color: var(--gold-light); font-style: italic; }
+    .pp-subtitle {
+      font-size: 0.85rem;
+      color: rgba(245,239,224,0.6);
+    }
+
+    /* ─── Content ─── */
+    .pp-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .pp-section {
+      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .pp-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .pp-section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 1.8rem 0 0.6rem;
+      color: var(--dark);
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #3a3028;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      font-size: 0.9rem;
+      color: #3a3028;
+      line-height: 1.8;
+      margin-bottom: 0.3rem;
+    }
+
+    a { color: var(--gold); text-decoration: underline; }
+    a:hover { opacity: 0.8; }
+
+    .pp-highlight {
+      background: var(--white);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.88rem;
+      color: #3a3028;
+      line-height: 1.7;
+    }
+
+    .pp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.85rem;
+    }
+    .pp-table th {
+      background: var(--dark);
+      color: var(--cream);
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+    .pp-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      color: #3a3028;
+      vertical-align: top;
+    }
+    .pp-table tr:last-child td { border-bottom: none; }
+    .pp-table tr:nth-child(even) td { background: var(--white); }
+
+    .pp-contact-box {
+      background: var(--dark);
+      color: var(--cream);
+      padding: 1.5rem 1.8rem;
+      border-radius: 4px;
+      margin-top: 1.2rem;
+    }
+    .pp-contact-box p { color: rgba(245,239,224,0.85); margin-bottom: 0.4rem; }
+    .pp-contact-box a { color: var(--gold-light); }
+
+    /* ─── Footer ─── */
+    .pp-footer {
+      background: var(--parchment);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .pp-footer a { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .pp-header { padding: 2rem 1.2rem; }
+      .pp-content { padding: 2rem 1.2rem 4rem; }
+      .pp-table { font-size: 0.78rem; }
+      .pp-table th, .pp-table td { padding: 0.5rem 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="pp-header">
+    <div class="pp-header-inner">
+      <a href="index.html" class="pp-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="15,18 9,12 15,6"/>
+        </svg>
+        Voltar ao site
+      </a>
+      <h1 class="pp-title">Política de <em>Privacidade</em></h1>
+      <p class="pp-subtitle">Última atualização: junho de 2026</p>
+    </div>
+  </header>
+
+  <main class="pp-content">
+
+    <!-- INTRODUÇÃO -->
+    <div class="pp-section">
+      <div class="pp-section-label">Introdução</div>
+      <h2>O seu direito à privacidade</h2>
+      <p>
+        A Susana Xarepe — Solicitadora (doravante "a Solicitadora" ou "nós") respeita a sua privacidade e está comprometida com a proteção dos seus dados pessoais. Esta política explica como recolhemos, utilizamos e protegemos as informações que nos fornece.
+      </p>
+      <div class="pp-highlight">
+        Este site é um site estático e institucional. Não utilizamos cookies de rastreamento, não recorremos a publicidade comportamental e não vendemos os seus dados a terceiros.
+      </div>
+    </div>
+
+    <!-- RESPONSÁVEL -->
+    <div class="pp-section">
+      <div class="pp-section-label">Responsável pelo Tratamento</div>
+      <h2>Quem trata os seus dados</h2>
+      <p>O responsável pelo tratamento dos dados pessoais recolhidos neste site é:</p>
+      <div class="pp-contact-box">
+        <p><strong>Susana Xarepe — Solicitadora</strong></p>
+        <p>R. do Ponte 45 loja, 2955-190 Pinhal Novo, Portugal</p>
+        <p>Email: <a href="mailto:susana.xarepe@gmail.com">susana.xarepe@gmail.com</a></p>
+        <p>Telefone: <a href="tel:+351963715372">+351 963 715 372</a></p>
+      </div>
+    </div>
+
+    <!-- DADOS RECOLHIDOS -->
+    <div class="pp-section">
+      <div class="pp-section-label">Dados Pessoais</div>
+      <h2>Que dados recolhemos</h2>
+      <p>Recolhemos apenas os dados que nos fornece voluntariamente através do formulário de contacto:</p>
+
+      <table class="pp-table">
+        <thead>
+          <tr><th>Dado</th><th>Finalidade</th><th>Obrigatoriedade</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nome</td><td>Identificação e resposta ao pedido</td><td>Obrigatório</td></tr>
+          <tr><td>Email</td><td>Resposta ao pedido de contacto</td><td>Obrigatório</td></tr>
+          <tr><td>Telefone</td><td>Contacto alternativo (se preferir)</td><td>Opcional</td></tr>
+          <tr><td>Serviço de interesse</td><td>Encaminhamento do pedido</td><td>Obrigatório</td></tr>
+          <tr><td>Mensagem</td><td>Análise e resposta ao pedido</td><td>Obrigatório</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Dados não recolhidos</h3>
+      <p>Este site <strong>não recolhe</strong>:</p>
+      <ul>
+        <li>Dados de pagamento</li>
+        <li>Dados sensíveis (saúde, origem racial, opiniões políticas, etc.)</li>
+        <li>Dados de localização</li>
+        <li>Dados de navegação ou comportamento (sem analytics ou rastreamento)</li>
+      </ul>
+    </div>
+
+    <!-- BASE LEGAL -->
+    <div class="pp-section" id="rgpd">
+      <div class="pp-section-label">RGPD — Regulamento Geral de Proteção de Dados</div>
+      <h2>Base jurídica do tratamento</h2>
+      <p>
+        O tratamento dos seus dados pessoais é realizado com base no <strong>artigo 6.º, n.º 1, alínea b) do RGPD</strong> — execução de diligências pré-contratuais a pedido do titular dos dados — e, quando aplicável, no <strong>interesse legítimo</strong> (alínea f)) para resposta a pedidos de informação.
+      </p>
+      <p>
+        O tratamento está em conformidade com o <strong>Regulamento (UE) 2016/679</strong> (RGPD) e com a legislação nacional aplicável, nomeadamente a Lei n.º 58/2019, de 8 de agosto.
+      </p>
+
+      <h3>Prazo de conservação</h3>
+      <p>
+        Os dados recolhidos através do formulário são conservados pelo período estritamente necessário para responder ao seu pedido e, se resultar numa relação profissional, pelo prazo legalmente exigido para a atividade de solicitadoria (em regra, <strong>10 anos</strong> após o termo do mandato, nos termos do Estatuto da OSAE).
+      </p>
+      <p>
+        Pedidos de contacto sem seguimento são eliminados ao fim de <strong>12 meses</strong>.
+      </p>
+    </div>
+
+    <!-- DIREITOS -->
+    <div class="pp-section">
+      <div class="pp-section-label">Os seus direitos</div>
+      <h2>Direitos do titular dos dados</h2>
+      <p>Ao abrigo do RGPD, tem os seguintes direitos:</p>
+      <ul>
+        <li><strong>Direito de acesso</strong> — saber quais os dados que temos sobre si.</li>
+        <li><strong>Direito de retificação</strong> — corrigir dados incorretos ou incompletos.</li>
+        <li><strong>Direito ao apagamento</strong> ("direito a ser esquecido") — solicitar a eliminação dos seus dados, salvo obrigação legal de conservação.</li>
+        <li><strong>Direito à limitação do tratamento</strong> — restringir o uso dos seus dados em determinadas circunstâncias.</li>
+        <li><strong>Direito de oposição</strong> — opor-se ao tratamento baseado em interesse legítimo.</li>
+        <li><strong>Direito à portabilidade</strong> — receber os seus dados num formato estruturado e legível por máquina.</li>
+      </ul>
+      <p>
+        Para exercer qualquer destes direitos, contacte-nos por email: <a href="mailto:susana.xarepe@gmail.com">susana.xarepe@gmail.com</a>. Responderemos no prazo máximo de <strong>30 dias</strong>.
+      </p>
+      <p>
+        Tem ainda o direito de apresentar reclamação à <strong>Comissão Nacional de Proteção de Dados (CNPD)</strong> em <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer">www.cnpd.pt</a>.
+      </p>
+    </div>
+
+    <!-- PARTILHA DE DADOS -->
+    <div class="pp-section">
+      <div class="pp-section-label">Partilha de Dados</div>
+      <h2>Com quem partilhamos os seus dados</h2>
+      <p>
+        Os seus dados são enviados através do serviço <strong>Formspree</strong> (formspree.io), que atua como subcontratante e processa os dados exclusivamente para fins de entrega de mensagens. A Formspree está localizada nos EUA e opera em conformidade com o RGPD sob as cláusulas contratuais tipo da UE.
+      </p>
+      <p>
+        <strong>Não vendemos, alugamos nem partilhamos</strong> os seus dados com terceiros para fins de marketing ou publicidade.
+      </p>
+    </div>
+
+    <!-- COOKIES -->
+    <div class="pp-section">
+      <div class="pp-section-label">Cookies e Rastreamento</div>
+      <h2>Cookies</h2>
+      <p>
+        Este site <strong>não utiliza cookies</strong> de rastreamento, publicidade ou análise comportamental. Não recorremos a Google Analytics, Facebook Pixel, nem quaisquer outras ferramentas de rastreamento de terceiros.
+      </p>
+      <p>
+        As únicas ligações externas estabelecidas são para carregar os tipos de letra (Google Fonts) e para enviar o formulário (Formspree). Nenhum dado de identificação pessoal é transmitido nestas ligações além do pedido HTTP padrão.
+      </p>
+    </div>
+
+    <!-- SEGURANÇA -->
+    <div class="pp-section">
+      <div class="pp-section-label">Segurança</div>
+      <h2>Proteção dos dados</h2>
+      <p>
+        Este site é servido exclusivamente via <strong>HTTPS</strong>. As comunicações entre o seu browser e os nossos servidores são encriptadas. Implementámos ainda medidas técnicas adicionais:
+      </p>
+      <ul>
+        <li>Política de Segurança de Conteúdo (CSP) para prevenir ataques XSS</li>
+        <li>Cabeçalho <code>upgrade-insecure-requests</code> para garantir ligações seguras</li>
+        <li>Proteção anti-spam no formulário (honeypot e limitação de frequência de envio)</li>
+        <li>Restrição de origens permitidas para scripts e ligações de rede</li>
+      </ul>
+    </div>
+
+    <!-- AVISO LEGAL -->
+    <div class="pp-section" id="aviso-legal">
+      <div class="pp-section-label">Aviso Legal</div>
+      <h2>Informação legal</h2>
+
+      <h3>Identidade e registo profissional</h3>
+      <p>
+        Susana Xarepe é Solicitadora devidamente inscrita na <strong>Ordem dos Solicitadores e dos Agentes de Execução (OSAE)</strong>, exercendo a atividade em conformidade com o Estatuto da OSAE (Lei n.º 154/2015, de 14 de setembro) e demais legislação aplicável.
+      </p>
+
+      <h3>Propriedade intelectual</h3>
+      <p>
+        O conteúdo deste site — incluindo textos, design, logótipos e imagens — é propriedade exclusiva de Susana Xarepe ou está devidamente licenciado. É proibida a reprodução total ou parcial sem autorização prévia escrita.
+      </p>
+
+      <h3>Limitação de responsabilidade</h3>
+      <p>
+        As informações disponibilizadas neste site têm carácter meramente informativo e geral, não constituindo aconselhamento jurídico. Para obter parecer profissional, deverá contactar a solicitadora diretamente. A Solicitadora não se responsabiliza por decisões tomadas com base exclusiva no conteúdo deste site.
+      </p>
+
+      <h3>Ligações externas</h3>
+      <p>
+        Este site pode conter ligações a sites de terceiros. A Solicitadora não controla esses sites e não se responsabiliza pelo seu conteúdo ou práticas de privacidade.
+      </p>
+
+      <h3>Lei aplicável</h3>
+      <p>
+        Esta política é regida pela lei portuguesa e pela legislação europeia aplicável. Em caso de litígio, é competente o tribunal da comarca de Setúbal.
+      </p>
+    </div>
+
+    <!-- ALTERAÇÕES -->
+    <div class="pp-section">
+      <div class="pp-section-label">Atualizações</div>
+      <h2>Alterações a esta política</h2>
+      <p>
+        Reservamo-nos o direito de atualizar esta política a qualquer momento. A data da última revisão é indicada no topo da página. Recomendamos que consulte esta página periodicamente.
+      </p>
+      <p>
+        Para qualquer questão relacionada com esta política, contacte-nos:
+      </p>
+      <div class="pp-contact-box">
+        <p><a href="mailto:susana.xarepe@gmail.com">susana.xarepe@gmail.com</a></p>
+        <p><a href="tel:+351963715372">+351 963 715 372</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="pp-footer">
+    <p>© 2026 Susana Xarepe — Solicitadora · <a href="index.html">Voltar ao site</a></p>
+  </footer>
+
+</body>
+</html>

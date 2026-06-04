@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'none'; upgrade-insecure-requests;" />
   <title>Susana Xarepe — Solicitadora</title>
   <meta name="description" content="Serviços de solicitadoria. Heranças, procurações, contratos, registo predial e muito mais." />
 
@@ -40,10 +41,10 @@
 
   <!-- Mobile Nav -->
   <div class="nav-mobile" id="mobileNav" role="dialog" aria-label="Menu de navegação">
-    <a href="#inicio"   onclick="closeMobileNav()">Início</a>
-    <a href="#servicos" onclick="closeMobileNav()">Serviços</a>
-    <a href="#sobre"    onclick="closeMobileNav()">Sobre</a>
-    <a href="#contacto" onclick="closeMobileNav()">Contacto</a>
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contacto">Contacto</a>
   </div>
 
   <!-- ─── HERO ─── -->
@@ -330,8 +331,10 @@
                 <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Descreva brevemente o que precisa..." required></textarea>
               </div>
             </div>
+            <!-- Honeypot anti-spam: campo invisível — bots preenchem, humanos não -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" />
             <button type="submit" class="form-submit">Enviar mensagem</button>
-            <p class="form-note">Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD.</p>
+            <p class="form-note">Os seus dados são tratados com total confidencialidade, em conformidade com o RGPD. <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</p>
           </form>
           <div class="form-success" id="formSuccess" role="alert">
             <div class="form-success-icon" aria-hidden="true">
@@ -392,9 +395,9 @@
         <div class="footer-col">
           <div class="footer-col-title">Legal</div>
           <ul>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Aviso Legal</a></li>
-            <li><a href="#">RGPD</a></li>
+            <li><a href="privacy-policy.html">Política de Privacidade</a></li>
+            <li><a href="privacy-policy.html#aviso-legal">Aviso Legal</a></li>
+            <li><a href="privacy-policy.html#rgpd">RGPD</a></li>
             <li><a href="https://www.livroreclamacoes.pt/inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></li>
           </ul>
         </div>
@@ -402,8 +405,8 @@
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 Susana Xarepe — Solicitadora. Todos os direitos reservados.</p>
         <div class="footer-legal">
-          <a href="#">Política de Privacidade</a>
-          <a href="#">Termos de Uso</a>
+          <a href="privacy-policy.html">Política de Privacidade</a>
+          <a href="privacy-policy.html#aviso-legal">Termos de Uso</a>
         </div>
       </div>
     </div>

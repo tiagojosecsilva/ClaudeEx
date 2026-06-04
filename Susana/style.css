@@ -625,6 +625,10 @@ nav.scrolled {
 }
 .form-submit:hover { background: var(--dark2); transform: translateY(-1px); }
 .form-note { margin-top: 1rem; font-size: 0.72rem; color: var(--muted); text-align: center; line-height: 1.6; }
+.form-note a { color: var(--gold); text-decoration: underline; }
+.form-fallback { margin-top: 0.75rem; font-size: 0.78rem; color: var(--muted); text-align: center; }
+.form-fallback a { color: var(--gold); text-decoration: underline; }
+.form-general-error { margin-bottom: 0.75rem; font-size: 0.82rem; color: #c0392b; text-align: center; }
 .form-success { display: none; text-align: center; padding: 2rem; }
 .form-success.show { display: block; }
 .form-success-icon {
